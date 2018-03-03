@@ -40,7 +40,7 @@ const sub = (map, term) => {
     if (term.Lambda) {
         let xp = term.x;
         while (contains(map[Object.keys(map)[0]], xp.x)) {
-            xp = Var(term.x.x + '\'');
+            xp = Var(xp.x + '\'');
         }
         return Lambda(xp, sub(map, sub({ [term.x.x] : xp }, term.M)));
     }

@@ -1,4 +1,4 @@
-const test   = require('tape');
+const test = require('tape');
 const { calc, lex, parse, reduce, str } = require('./mini-lambda-calc');
 
 test('lex', $ => {
