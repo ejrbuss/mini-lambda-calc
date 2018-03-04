@@ -1,7 +1,5 @@
 const calc = src => {
-    if(!src) {
-        throw "Syntax Error: empty string";
-    }
+    if(!src) { throw "Syntax Error: empty string"; }
     return str(reduce(parse(lex(src))));
 };
 
