@@ -1,4 +1,9 @@
-const calc = src => str(reduce(parse(lex(src))));
+const calc = src => {
+    if(!src) {
+        throw "Syntax Error: empty string";
+    }
+    return str(reduce(parse(lex(src))));
+};
 
 const Var    = (x)    => ({ x,    Var    : true });
 const App    = (M, N) => ({ M, N, App    : true });
